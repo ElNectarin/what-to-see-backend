@@ -8,4 +8,4 @@ import { FilmsController } from './controller/films.controller';
   providers: [FilmsService],
   exports: [FilmsService],
 })
-export class Films {}
+export class FilmsModule {}
