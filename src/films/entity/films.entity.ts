@@ -14,40 +14,43 @@ export class Films extends Model {
   @PrimaryKey
   @Unique
   @Column
-  declare film_id: number;
+  declare id: number;
 
   @Column
-  declare film_name: string;
+  declare filmName: string;
 
   @Column({
     type: DataType.TEXT,
   })
-  declare film_description: string;
+  declare filmDescription: string;
 
   @Column
-  declare film_director: string;
+  declare filmDirector: string;
 
   @Column
-  declare film_writer: string;
+  declare filmWriter: string;
 
   @Column
-  declare film_year_of_production: string;
+  declare filmYearOfProduction: string;
 
   @Column
-  declare film_country: string;
+  declare filmCountry: string;
 
   @Column
-  declare film_genre: string;
+  declare filmGenre: string;
 
   @Column
-  declare film_budget: string;
+  declare filmBudget: string;
 
   @Column
-  declare film_fees: string;
+  declare filmFees: string;
 
   @Column
-  declare film_limit_age: string;
+  declare filmLimitAge: string;
 
   @Column
-  declare film_duration: string;
+  declare filmDuration: string;
+
+  @Column
+  declare filmPhoto: string;
 }

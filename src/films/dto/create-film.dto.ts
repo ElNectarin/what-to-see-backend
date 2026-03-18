@@ -11,4 +11,5 @@ export class CreateFilmDto {
   filmFees!: string;
   filmLimitAge!: string;
   filmDuration!: string;
+  filmPhoto?: string | null;
 }

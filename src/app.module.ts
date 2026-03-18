@@ -4,6 +4,8 @@ import { AppService } from './app.service';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { FilmsModule } from './films/films.module';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
 
 @Module({
   imports: [
@@ -23,6 +25,10 @@ import { FilmsModule } from './films/films.module';
       }),
     }),
     FilmsModule,
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', 'src', 'films', 'upload'),
+      serveRoot: '/films/upload',
+    }),
   ],
   controllers: [AppController],
   providers: [AppService],
