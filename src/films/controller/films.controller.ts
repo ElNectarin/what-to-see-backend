@@ -27,7 +27,6 @@ export class FilmsController {
     @Body() createFilmDto: CreateFilmDto,
     @UploadedFile() file?: Express.Multer.File,
   ) {
-    console.log(file)
     return this.filmsService.createFilms({
       ...createFilmDto,
       filmPhoto: file ? file.filename : null,
